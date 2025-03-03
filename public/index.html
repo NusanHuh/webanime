@@ -95,7 +95,7 @@
             resultsDiv.style.display = "none";
 
             try {
-                const response = await fetch(`/search?query=${encodeURIComponent(query)}`);
+                const response = await fetch(`/api/search?query=${encodeURIComponent(query)}`);
                 const images = await response.json();
                 if (images.length === 0) {
                     resultsDiv.style.display = "inline-block";
